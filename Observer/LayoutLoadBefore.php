@@ -21,6 +21,8 @@ final class LayoutLoadBefore implements ObserverInterface {
 	 * @used-by \Magento\Framework\Event\Invoker\InvokerDefault::_callObserverMethod()
 	 */
 	function execute(O $o):void {
-		df_handles();
+		if (df_is_catalog_layered_view() || df_is_catalog_search_result()) {
+			df_page_config()->setRobots('NOINDEX,FOLLOW');
+		}
 	}
 }
