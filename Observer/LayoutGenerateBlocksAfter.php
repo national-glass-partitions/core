@@ -21,8 +21,7 @@ final class LayoutGenerateBlocksAfter implements ObserverInterface {
 	 * @used-by \Magento\Framework\Event\Invoker\InvokerDefault::_callObserverMethod()
 	 */
 	function execute(O $o):void {
-		if (df_is_catalog_layered_view() || df_is_catalog_search_result()) {
-			df_catalog_layer()->getState()->getFilters();
+		if (df_is_catalog_search_result() || df_is_catalog_product_list_filtered()) {
 			df_robots_no_index();
 		}
 	}

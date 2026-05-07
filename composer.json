@@ -1,6 +1,6 @@
 {
 	"name": "ngp/core"
-	,"version": "0.0.1"
+	,"version": "0.0.2"
 	,"description": "A custom module for nationalglasspartitions.co.uk (Magento 2)"
 	,"type": "magento2-module"
 	,"homepage": "https://github.com/national-glass-partitions/core"
@@ -11,7 +11,7 @@
 		,"homepage": "https://upwork.com/fl/mage2pro"
 		,"role": "Developer"
 	}]
-	,"require": {"mage2pro/core": ">=11.5.4"}
+	,"require": {"mage2pro/core": ">=11.5.7"}
 	,"autoload": {"files": ["registration.php"], "psr-4": {"NGP\\Core\\": ""}}
 	,"keywords": ["Magento 2"]
 }
