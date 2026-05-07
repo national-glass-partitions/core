@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:Event/etc/events.xsd'
+>
+<!-- 2026-05-07
+"Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
+on layered navigation pages": https://github.com/national-glass-partitions/core/issues/1 -->
+	<event name='layout_load_before'>
+		<observer
+			instance='NGP\Core\Observer\LayoutLoadBefore'
+			name='NGP\Core\Observer\LayoutLoadBefore'
+		/>
+	</event>
+</config>
