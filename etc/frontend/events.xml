@@ -8,10 +8,10 @@
 on layered navigation pages": https://github.com/national-glass-partitions/core/issues/1
 2) "Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
 on `catalogsearch/result` pages": https://github.com/national-glass-partitions/core/issues/2 -->
-	<event name='layout_load_before'>
+	<event name='layout_generate_blocks_after'>
 		<observer
-			instance='NGP\Core\Observer\LayoutLoadBefore'
-			name='NGP\Core\Observer\LayoutLoadBefore'
+			instance='NGP\Core\Observer\LayoutGenerateBlocksAfter'
+			name='NGP\Core\Observer\LayoutGenerateBlocksAfter'
 		/>
 	</event>
 </config>

@@ -7,7 +7,7 @@ use Magento\Framework\Event\ObserverInterface;
 # on layered navigation pages": https://github.com/national-glass-partitions/core/issues/1
 # 2) "Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
 # on `catalogsearch/result` pages": https://github.com/national-glass-partitions/core/issues/2
-final class LayoutLoadBefore implements ObserverInterface {
+final class LayoutGenerateBlocksAfter implements ObserverInterface {
 	/**
 	 * 2026-05-07
 	 * @override
@@ -22,7 +22,8 @@ final class LayoutLoadBefore implements ObserverInterface {
 	 */
 	function execute(O $o):void {
 		if (df_is_catalog_layered_view() || df_is_catalog_search_result()) {
-			df_page_config()->setRobots('NOINDEX,FOLLOW');
+			df_catalog_layer()->getState()->getFilters();
+			df_robots_no_index();
 		}
 	}
 }
