@@ -4,8 +4,11 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:Event/etc/events.xsd'
 >
 <!-- 2026-05-07
-"Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
-on layered navigation pages": https://github.com/national-glass-partitions/core/issues/1 -->
+1) "Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
+on layered navigation pages": https://github.com/national-glass-partitions/core/issues/1
+2) "Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
+on `catalogsearch/result` pages": https://github.com/national-glass-partitions/core/issues/2
+-->
 	<event name='layout_load_before'>
 		<observer
 			instance='NGP\Core\Observer\LayoutLoadBefore'
