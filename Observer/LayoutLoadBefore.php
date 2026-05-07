@@ -3,8 +3,10 @@ namespace NGP\Core\Observer;
 use Magento\Framework\Event\Observer as O;
 use Magento\Framework\Event\ObserverInterface;
 # 2026-05-07
-# "Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
+# 1) "Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
 # on layered navigation pages": https://github.com/national-glass-partitions/core/issues/1
+# 2) "Replace `INDEX` with `NOINDEX` in the `<meta name='robots' content='INDEX,FOLLOW'/>` tag
+# on `catalogsearch/result` pages": https://github.com/national-glass-partitions/core/issues/2
 final class LayoutLoadBefore implements ObserverInterface {
 	/**
 	 * 2026-05-07
